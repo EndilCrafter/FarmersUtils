@@ -1,0 +1,48 @@
+{
+  "itemGroup.farmersutils": "Farmer's Utils",
+
+  "block.farmersutils.apple_bag": "リンゴの収穫袋",
+  "block.farmersutils.brown_mushroom_bag": "茶色のキノコの収穫袋",
+  "block.farmersutils.cocoa_bean_bag": "カカオ豆の収穫袋",
+  "block.farmersutils.crimson_fungus_bag": "真紅のキノコの収穫袋",
+  "block.farmersutils.egg_box": "卵パック",
+  "block.farmersutils.glow_berry_bag": "グロウベリーの収穫袋",
+  "block.farmersutils.golden_apple_bag": "金のリンゴの収穫袋",
+  "block.farmersutils.kelp_block": "コンブブロック",
+  "block.farmersutils.red_mushroom_bag": "赤色のキノコの収穫袋",
+  "block.farmersutils.sugar_cane_bale": "サトウキビの束",
+  "block.farmersutils.sweet_berry_bag": "スイートベリーの収穫袋",
+  "block.farmersutils.warped_fungus_bag": "歪んだキノコの収穫袋",
+
+  "block.farmersutils.golden_mushroom_bag": "金のキノコの収穫袋",
+  "block.farmersutils.golden_cocoa_bean_bag": "金のカカオ豆の収穫袋",
+  "block.farmersutils.golden_fungus_bag": "艶めくキノコの収穫袋",
+  "block.farmersutils.golden_egg_box": "金の卵パック",
+  "block.farmersutils.golden_glow_berry_bag": "金のグロウベリーの収穫袋",
+  "block.farmersutils.golden_kelp_block": "金のコンブブロック",
+  "block.farmersutils.golden_sugar_cane_bale": "金のサトウキビの束",
+  "block.farmersutils.sweet_golden_berry_bag": "金のスイートベリーの収穫袋",
+
+  "block.farmersutils.crate": "木箱",
+
+  "item.farmersutils.boiled_egg": "ゆで卵",
+
+  "item.farmersutils.boiled_golden_egg": "金のゆで卵",
+
+  "farmersutils.container.crate": "木箱",
+
+  "config.farmersutils.general_settings": "基本設定",
+  "config.farmersutils.general_settings.enable_storages": "バニラの材料の圧縮ブロックを有効にする",
+  "config.farmersutils.storages": "圧縮ブロック",
+  "config.farmersutils.storages.enable_apple_bag": "リンゴの収穫袋を有効にする",
+  "config.farmersutils.storages.enable_brown_mushroom_bag": "茶色のキノコの収穫袋を有効にする",
+  "config.farmersutils.storages.enable_cocoa_bean_bag": "カカオ豆の収穫袋を有効にする",
+  "config.farmersutils.storages.enable_crimson_fungus_bag": "真紅のキノコの収穫袋を有効にする",
+  "config.farmersutils.storages.enable_egg_box": "卵パックを有効にする",
+  "config.farmersutils.storages.enable_glow_berry_bag": "グロウベリーの収穫袋を有効にする",
+  "config.farmersutils.storages.enable_kelp_block": "コンブブロックを有効にする",
+  "config.farmersutils.storages.enable_red_mushroom_bag": "赤色のキノコの収穫袋を有効にする",
+  "config.farmersutils.storages.enable_sugar_cane_bale": "サトウキビの束を有効にする",
+  "config.farmersutils.storages.enable_sweet_berry_bag": "スイートベリーの収穫袋を有効にする",
+  "config.farmersutils.storages.enable_warped_fungus_bag": "歪んだキノコの収穫袋を有効にする"
+}

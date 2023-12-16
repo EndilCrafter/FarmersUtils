@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "farmersutils:item/boiled_golden_egg"
+  }
+}

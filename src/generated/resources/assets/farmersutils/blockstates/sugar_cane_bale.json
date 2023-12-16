@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "farmersutils:block/sugar_cane_bale_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "farmersutils:block/sugar_cane_bale"
+    },
+    "axis=z": {
+      "model": "farmersutils:block/sugar_cane_bale_horizontal",
+      "x": 90
+    }
+  }
+}

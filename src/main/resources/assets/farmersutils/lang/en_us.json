@@ -1,0 +1,48 @@
+{
+  "itemGroup.farmersutils": "Farmer's Utils",
+
+  "block.farmersutils.apple_bag": "Apple Bag",
+  "block.farmersutils.brown_mushroom_bag": "Brown Mushroom Bag",
+  "block.farmersutils.cocoa_bean_bag": "Cocoa Bean Bag",
+  "block.farmersutils.crimson_fungus_bag": "Crimson Fungus Bag",
+  "block.farmersutils.egg_box": "Egg Box",
+  "block.farmersutils.glow_berry_bag": "Glow Berry Bag",
+  "block.farmersutils.golden_apple_bag": "Golden Apple Bag",
+  "block.farmersutils.kelp_block": "Kelp Block",
+  "block.farmersutils.red_mushroom_bag": "Red Mushroom Bag",
+  "block.farmersutils.sugar_cane_bale": "Sugar Cane Bale",
+  "block.farmersutils.sweet_berry_bag": "Sweet Berry Bag",
+  "block.farmersutils.warped_fungus_bag": "Warped Fungus Bag",
+
+  "block.farmersutils.golden_mushroom_bag": "Golden Mushroom Bag",
+  "block.farmersutils.golden_cocoa_bean_bag": "Golden Cocoa Bean Bag",
+  "block.farmersutils.golden_fungus_bag": "Golden Fungus Bag",
+  "block.farmersutils.golden_egg_box": "Golden Egg Box",
+  "block.farmersutils.golden_glow_berry_bag": "Golden Glow Berry Bag",
+  "block.farmersutils.golden_kelp_block": "Golden Kelp Block",
+  "block.farmersutils.golden_sugar_cane_bale": "Golden Sugar Cane Bale",
+  "block.farmersutils.sweet_golden_berry_bag": "Sweet Golden Berry Bag",
+
+  "block.farmersutils.crate": "Crate",
+
+  "item.farmersutils.boiled_egg": "Boiled Egg",
+
+  "item.farmersutils.boiled_golden_egg": "Boiled Golden Egg",
+
+  "farmersutils.container.crate": "Crate",
+
+  "config.farmersutils.general_settings": "General Settings",
+  "config.farmersutils.general_settings.enable_storages": "Enable Vanilla Ingredient Storages",
+  "config.farmersutils.storages": "Storages",
+  "config.farmersutils.storages.enable_apple_bag": "Enable Apple Bag",
+  "config.farmersutils.storages.enable_brown_mushroom_bag": "Enable Brown Mushroom Bag",
+  "config.farmersutils.storages.enable_cocoa_bean_bag": "Enable Cocoa Bean Bag",
+  "config.farmersutils.storages.enable_crimson_fungus_bag": "Enable Crimson Fungus Bag",
+  "config.farmersutils.storages.enable_egg_box": "Enable Egg Box",
+  "config.farmersutils.storages.enable_glow_berry_bag": "Enable Glow Berry Bag",
+  "config.farmersutils.storages.enable_kelp_block": "Enable Kelp Block",
+  "config.farmersutils.storages.enable_red_mushroom_bag": "Enable Red Mushroom Bag",
+  "config.farmersutils.storages.enable_sugar_cane_bale": "Enable Sugar Cane Bale",
+  "config.farmersutils.storages.enable_sweet_berry_bag": "Enable Sweet Berry Bag",
+  "config.farmersutils.storages.enable_warped_fungus_bag": "Enable Warped Fungus Bag"
+}

@@ -1,0 +1,26 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:vanilla_storages_enabled"
+        },
+        {
+          "type": "farmersutils:egg_box_enabled"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "farmersutils:egg_box"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "minecraft:egg"
+  }
+}

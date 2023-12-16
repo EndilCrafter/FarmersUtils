@@ -1,0 +1,45 @@
+modLoader = "javafml"
+
+loaderVersion = "${loader_version_range}"
+
+license = "${mod_license}"
+
+[[mods]] #mandatory
+# The modid of the mod
+modId = "farmersutils" #mandatory
+# The version number of the mod
+version = "${mod_version}" #mandatory
+# A display name for the mod
+displayName = "${mod_name}" #mandatory
+
+authors = "${mod_authors}" #optional
+
+logoFile = "logo.png"
+
+logoBlur = false
+
+
+# The description text for the mod (multi line!) (#mandatory)
+description = '''${mod_description}'''
+
+[[dependencies.farmersutils]] #optional
+
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.farmersutils]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.farmersutils]]
+modId = "farmersdelight"
+mandatory = true
+versionRange = "[1.2.3,)"
+ordering = "AFTER"
+side = "BOTH"

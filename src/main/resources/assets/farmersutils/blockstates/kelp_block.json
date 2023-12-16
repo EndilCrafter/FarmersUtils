@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "farmersutils:block/kelp_block"
+    }
+  }
+}

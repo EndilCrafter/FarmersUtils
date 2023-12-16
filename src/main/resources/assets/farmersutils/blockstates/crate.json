@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "filled=0": {
+      "model": "farmersutils:block/crate_stage0"
+    },
+    "filled=1": {
+      "model": "farmersutils:block/crate_stage1"
+    },
+    "filled=2": {
+      "model": "farmersutils:block/crate_stage2"
+    },
+    "filled=3": {
+      "model": "farmersutils:block/crate_stage3"
+    }
+  }
+}
