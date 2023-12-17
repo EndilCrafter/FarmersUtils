@@ -1,0 +1,34 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:goldelight_storages_enabled"
+        },
+        {
+          "type": "farmersutils:golden_fungus_bag_enabled"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "goldelight"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "goldelight:golden_fungus"
+    }
+  },
+  "result": {
+    "item": "farmersutils:golden_fungus_bag"
+  }
+}

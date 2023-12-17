@@ -24,6 +24,7 @@
   "block.farmersutils.sweet_golden_berry_bag": "金のスイートベリーの収穫袋",
 
   "block.farmersutils.crate": "木箱",
+  "block.farmersutils.tray": "トレー",
 
   "item.farmersutils.boiled_egg": "ゆで卵",
 
@@ -33,6 +34,7 @@
 
   "config.farmersutils.general_settings": "基本設定",
   "config.farmersutils.general_settings.enable_storages": "バニラの材料の圧縮ブロックを有効にする",
+  "config.farmersutils.general_settings.enable_goldelight_storages": "GolDelightの材料の圧縮ブロックを有効にする",
   "config.farmersutils.storages": "圧縮ブロック",
   "config.farmersutils.storages.enable_apple_bag": "リンゴの収穫袋を有効にする",
   "config.farmersutils.storages.enable_brown_mushroom_bag": "茶色のキノコの収穫袋を有効にする",
@@ -40,9 +42,19 @@
   "config.farmersutils.storages.enable_crimson_fungus_bag": "真紅のキノコの収穫袋を有効にする",
   "config.farmersutils.storages.enable_egg_box": "卵パックを有効にする",
   "config.farmersutils.storages.enable_glow_berry_bag": "グロウベリーの収穫袋を有効にする",
+  "config.farmersutils.storages.enable_golden_apple_bag": "金のリンゴの収穫袋を有効にする",
   "config.farmersutils.storages.enable_kelp_block": "コンブブロックを有効にする",
   "config.farmersutils.storages.enable_red_mushroom_bag": "赤色のキノコの収穫袋を有効にする",
   "config.farmersutils.storages.enable_sugar_cane_bale": "サトウキビの束を有効にする",
   "config.farmersutils.storages.enable_sweet_berry_bag": "スイートベリーの収穫袋を有効にする",
-  "config.farmersutils.storages.enable_warped_fungus_bag": "歪んだキノコの収穫袋を有効にする"
+  "config.farmersutils.storages.enable_warped_fungus_bag": "歪んだキノコの収穫袋を有効にする",
+  "config.farmersutils.compats": "他Mod",
+  "config.farmersutils.compats.enable_golden_brown_mushroom_bag": "金のキノコの収穫袋を有効にする",
+  "config.farmersutils.compats.enable_golden_cocoa_bean_bag": "金のカカオ豆の収穫袋を有効にする",
+  "config.farmersutils.compats.enable_golden_crimson_fungus_bag": "艶めくキノコの収穫袋を有効にする",
+  "config.farmersutils.compats.enable_golden_egg_box": "金の卵パックを有効にする",
+  "config.farmersutils.compats.enable_golden_glow_berry_bag": "金のグロウベリーの収穫袋を有効にする",
+  "config.farmersutils.compats.enable_golden_kelp_block": "金のコンブブロックを有効にする",
+  "config.farmersutils.compats.enable_golden_sugar_cane_bale": "金のサトウキビの束を有効にする",
+  "config.farmersutils.compats.enable_sweet_golden_berry_bag": "金のスイートベリーの収穫袋を有効にする"
 }

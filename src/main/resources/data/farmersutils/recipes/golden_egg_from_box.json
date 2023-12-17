@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:goldelight_storages_enabled"
+        },
+        {
+          "type": "farmersutils:golden_egg_box_enabled"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "goldelight"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "farmersutils:golden_egg_box"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "goldelight:golden_egg"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:goldelight_storages_enabled"
+        },
+        {
+          "type": "farmersutils:golden_kelp_block_enabled"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "midashunger"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "farmersutils:golden_kelp_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "midashunger:golden_kelp"
+  }
+}

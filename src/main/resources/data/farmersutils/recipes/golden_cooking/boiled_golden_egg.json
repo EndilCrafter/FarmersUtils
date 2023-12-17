@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "goldelight"
+    }
+  ],
+  "type": "goldelight:golden_cooking",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredients": [
+    {
+      "item": "goldelight:golden_egg"
+    }
+  ],
+  "recipe_book_tab": "golden_misc",
+  "result": {
+    "item": "farmersutils:boiled_golden_egg"
+  }
+}

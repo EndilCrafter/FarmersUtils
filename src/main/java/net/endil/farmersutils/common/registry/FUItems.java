@@ -50,6 +50,8 @@ public class FUItems {
     //Utils
     public static final RegistryObject<Item> CRATE = registerWithTab("crate",
             () -> new BlockItem(FUBlocks.CRATE.get(), basicItem().stacksTo(1)));
+    public static final RegistryObject<Item> TRAY = registerWithTab("tray",
+            () -> new BlockItem(FUBlocks.TRAY.get(), basicItem()));
 
     //Item
     public static final RegistryObject<Item> BOILED_EGG = registerWithTab("boiled_egg",
@@ -75,6 +77,7 @@ public class FUItems {
             () -> new BlockItem(FUBlocks.GOLDEN_SUGAR_CANE_BALE.get(), basicItem()));
     public static final RegistryObject<Item> BOILED_GOLDEN_EGG = registerWithTab("boiled_golden_egg",
             () -> new Item(foodItem(FUFoodValues.BOILED_GOLDEN_EGG)));
+
     public static RegistryObject<Item> registerWithTab(final String name, final Supplier<Item> supplier) {
         RegistryObject<Item> block = ITEMS.register(name, supplier);
         CREATIVE_TAB_ITEMS.add(block);

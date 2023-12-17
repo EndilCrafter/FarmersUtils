@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:vanilla_storages_enabled"
+        },
+        {
+          "type": "farmersutils:golden_apple_bag_enabled"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result": {
+    "item": "farmersutils:golden_apple_bag"
+  }
+}

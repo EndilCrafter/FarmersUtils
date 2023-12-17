@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sugar_cane_bale": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersutils:sugar_cane_bale"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "farmersutils:sugar_cane_from_bale"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_cane_bale",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "farmersutils:sugar_cane_from_bale"
+    ]
+  },
+  "sends_telemetry_event": false
+}

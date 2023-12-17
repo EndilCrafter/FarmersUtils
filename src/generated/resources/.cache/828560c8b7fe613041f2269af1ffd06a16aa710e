@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-16T21:39:22.2916177	Item Models: farmersutils
+// 1.20.1	2023-12-17T19:15:22.3185784	Item Models: farmersutils
 a0a15fd0c7ca69c74d497c5ecfd4b36d9aac7156 assets/farmersutils/models/item/apple_bag.json
 9beeebab036c3e3c7485145c14d9eea691a27b5a assets/farmersutils/models/item/boiled_egg.json
 beb41a3693840c729527a969f3b752fe2994d268 assets/farmersutils/models/item/boiled_golden_egg.json
@@ -20,4 +20,5 @@ a5f18aca92265cbbe101c6aeb022b1152a247265 assets/farmersutils/models/item/golden_
 d5e2dd40f9c687cf0c3e0453b75643648aae6fb0 assets/farmersutils/models/item/sugar_cane_bale.json
 b4363bcb0f66de09b6a69bc75ff41a620c74b74c assets/farmersutils/models/item/sweet_berry_bag.json
 29f438bea4454b8127793d548ee1356aad2890c9 assets/farmersutils/models/item/sweet_golden_berry_bag.json
+29c97c1fc8495fa28496d5da2448e2cd16a0b98b assets/farmersutils/models/item/tray.json
 82b1d419c04d9edcaa5e02a003dfe0c9e46edca2 assets/farmersutils/models/item/warped_fungus_bag.json

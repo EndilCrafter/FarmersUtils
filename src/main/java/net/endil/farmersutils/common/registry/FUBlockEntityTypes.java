@@ -2,6 +2,7 @@ package net.endil.farmersutils.common.registry;
 
 import net.endil.farmersutils.FarmersUtils;
 import net.endil.farmersutils.common.block.entity.CrateBlockEntity;
+import net.endil.farmersutils.common.block.entity.TrayBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,6 +18,8 @@ public class FUBlockEntityTypes {
 
     public static final RegistryObject<BlockEntityType<CrateBlockEntity>> CRATE = TILES.register("crate",
             () -> BlockEntityType.Builder.of(CrateBlockEntity::new, FUBlocks.CRATE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<TrayBlockEntity>> TRAY = TILES.register("tray",
+            () -> BlockEntityType.Builder.of(TrayBlockEntity::new, FUBlocks.TRAY.get()).build(null));
 
 
 }

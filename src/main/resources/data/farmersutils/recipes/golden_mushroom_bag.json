@@ -1,0 +1,34 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:goldelight_storages_enabled"
+        },
+        {
+          "type": "farmersutils:golden_mushroom_bag_enabled"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "goldelight"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "goldelight:golden_mushroom"
+    }
+  },
+  "result": {
+    "item": "farmersutils:golden_mushroom_bag"
+  }
+}

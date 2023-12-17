@@ -5,6 +5,7 @@ import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -20,6 +21,10 @@ public class FUCrafting {
                 .define('S', Ingredient.of(Items.STICK))
                 .define('W', Ingredient.of(ItemTags.WOODEN_SLABS))
                 .unlockedBy("has_stick", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STICK))
+                .save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, FUItems.TRAY.get())
+                .requires(Ingredient.of(Items.BOWL))
+                .unlockedBy("has_bowl", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BOWL))
                 .save(consumer);
     }
 }

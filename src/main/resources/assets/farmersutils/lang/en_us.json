@@ -24,6 +24,7 @@
   "block.farmersutils.sweet_golden_berry_bag": "Sweet Golden Berry Bag",
 
   "block.farmersutils.crate": "Crate",
+  "block.farmersutils.tray": "Tray",
 
   "item.farmersutils.boiled_egg": "Boiled Egg",
 
@@ -33,6 +34,7 @@
 
   "config.farmersutils.general_settings": "General Settings",
   "config.farmersutils.general_settings.enable_storages": "Enable Vanilla Ingredient Storages",
+  "config.farmersutils.general_settings.enable_goldelight_storages": "Enable GolDelight Ingredient Storages",
   "config.farmersutils.storages": "Storages",
   "config.farmersutils.storages.enable_apple_bag": "Enable Apple Bag",
   "config.farmersutils.storages.enable_brown_mushroom_bag": "Enable Brown Mushroom Bag",
@@ -40,9 +42,19 @@
   "config.farmersutils.storages.enable_crimson_fungus_bag": "Enable Crimson Fungus Bag",
   "config.farmersutils.storages.enable_egg_box": "Enable Egg Box",
   "config.farmersutils.storages.enable_glow_berry_bag": "Enable Glow Berry Bag",
+  "config.farmersutils.storages.enable_golden_apple_bag": "Enable Golden Apple Bag",
   "config.farmersutils.storages.enable_kelp_block": "Enable Kelp Block",
   "config.farmersutils.storages.enable_red_mushroom_bag": "Enable Red Mushroom Bag",
   "config.farmersutils.storages.enable_sugar_cane_bale": "Enable Sugar Cane Bale",
   "config.farmersutils.storages.enable_sweet_berry_bag": "Enable Sweet Berry Bag",
-  "config.farmersutils.storages.enable_warped_fungus_bag": "Enable Warped Fungus Bag"
+  "config.farmersutils.storages.enable_warped_fungus_bag": "Enable Warped Fungus Bag",
+  "config.farmersutils.compats": "Compats",
+  "config.farmersutils.compats.enable_golden_brown_mushroom_bag": "Enable Golden Mushroom Bag",
+  "config.farmersutils.compats.enable_golden_cocoa_bean_bag": "Enable Golden Cocoa Bean Bag",
+  "config.farmersutils.compats.enable_golden_crimson_fungus_bag": "Enable Golden Fungus Bag",
+  "config.farmersutils.compats.enable_golden_egg_box": "Enable Golden Egg Box",
+  "config.farmersutils.compats.enable_golden_glow_berry_bag": "Enable Golden Glow Berry Bag",
+  "config.farmersutils.compats.enable_golden_kelp_block": "Enable Golden Kelp Block",
+  "config.farmersutils.compats.enable_golden_sugar_cane_bale": "Enable Golden Sugar Cane Bale",
+  "config.farmersutils.compats.enable_sweet_golden_berry_bag": "Enable Sweet Golden Berry Bag"
 }

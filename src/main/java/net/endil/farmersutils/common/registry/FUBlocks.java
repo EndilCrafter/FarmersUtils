@@ -3,6 +3,7 @@ package net.endil.farmersutils.common.registry;
 import net.endil.farmersutils.FarmersUtils;
 import net.endil.farmersutils.common.block.CrateBlock;
 import net.endil.farmersutils.common.block.EggBoxBlock;
+import net.endil.farmersutils.common.block.TrayBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -65,6 +66,8 @@ public class FUBlocks {
     //Utils
     public static final RegistryObject<Block> CRATE = BLOCKS.register("crate",
             () -> new CrateBlock(BlockBehaviour.Properties.copy(Blocks.COMPOSTER).noOcclusion()));
+    public static final RegistryObject<Block> TRAY = BLOCKS.register("tray",
+            () -> new TrayBlock(BlockBehaviour.Properties.copy(Blocks.COMPOSTER).noOcclusion().instabreak()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

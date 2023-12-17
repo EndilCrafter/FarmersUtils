@@ -1,4 +1,4 @@
-// 1.20.1	2023-12-16T21:39:22.2996141	Loot Tables
+// 1.20.1	2023-12-17T19:15:22.3235826	Loot Tables
 ec13758cd98b6fb4c91c7336a50995d86993f144 data/farmersutils/loot_tables/blocks/apple_bag.json
 d49ddee50c543b0fe4de6b2afbb6403b47f0b797 data/farmersutils/loot_tables/blocks/brown_mushroom_bag.json
 f0ba8e06a03d52e9092716dbe635580600f08e58 data/farmersutils/loot_tables/blocks/cocoa_bean_bag.json
@@ -19,4 +19,5 @@ ea4735d4710487df3fbe619bcdf538a7af737fed data/farmersutils/loot_tables/blocks/go
 3cb2045797b1aac026d1d89fc2ecc018e4fd738e data/farmersutils/loot_tables/blocks/sugar_cane_bale.json
 4d43231c6e13e26e0e53bf96c69f51cbe73e3dcf data/farmersutils/loot_tables/blocks/sweet_berry_bag.json
 93e717fdfc77a489d853fad5ea68d21da70e8f0e data/farmersutils/loot_tables/blocks/sweet_golden_berry_bag.json
+57ae1ae66fce8935d81a431d816c2bced3b8100a data/farmersutils/loot_tables/blocks/tray.json
 b0024266816cc4197addefd2955c713810f19bfe data/farmersutils/loot_tables/blocks/warped_fungus_bag.json

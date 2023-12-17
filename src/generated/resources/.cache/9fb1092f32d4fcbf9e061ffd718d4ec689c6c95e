@@ -1,5 +1,7 @@
-// 1.20.1	2023-12-16T13:31:32.3916261	Recipes
+// 1.20.1	2023-12-17T19:15:22.3265851	Recipes
 24692586b637753cccc0b4e6d5ffedb12f87ab55 data/farmersutils/advancements/recipes/cooking/boiled_egg.json
 ac772027b4ef98bfd518ba6d3af7871ff0ad01fc data/farmersutils/advancements/recipes/decorations/crate.json
+10ae51d10a2ba340069df3cda559388d36ecf640 data/farmersutils/advancements/recipes/decorations/tray.json
 e8fe7dfc40bbccee9e4a24ddbac4f338f9ba248c data/farmersutils/recipes/cooking/boiled_egg.json
 fbc22c68201f95d35f38b682d476d95dc7f92579 data/farmersutils/recipes/crate.json
+a82ed28dc08a3a325f96adb1b725395402393504 data/farmersutils/recipes/tray.json

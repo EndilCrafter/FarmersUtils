@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:goldelight_storages_enabled"
+        },
+        {
+          "type": "farmersutils:golden_mushroom_bag_enabled"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "goldelight"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "farmersutils:golden_mushroom_bag"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "goldelight:golden_mushroom"
+  }
+}
