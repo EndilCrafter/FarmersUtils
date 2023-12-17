@@ -1,5 +1,6 @@
 package net.endil.farmersutils.common.world.inventory;
 
+import net.endil.farmersutils.common.block.entity.CrateBlockEntity;
 import net.endil.farmersutils.common.registry.FUMenuTypes;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -8,6 +9,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.items.SlotItemHandler;
 
 public class CrateMenu extends AbstractContainerMenu {
     private static final int CONTAINER_SIZE = 72;
@@ -74,5 +77,9 @@ public class CrateMenu extends AbstractContainerMenu {
     public void removed(Player pPlayer) {
         super.removed(pPlayer);
         this.container.stopOpen(pPlayer);
+    }
+
+    public Container getContainer() {
+        return this.container;
     }
 }

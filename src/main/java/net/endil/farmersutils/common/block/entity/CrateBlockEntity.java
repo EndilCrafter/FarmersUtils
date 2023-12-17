@@ -3,22 +3,31 @@ package net.endil.farmersutils.common.block.entity;
 import net.endil.farmersutils.common.registry.FUBlockEntityTypes;
 import net.endil.farmersutils.common.world.inventory.CrateMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import vectorwing.farmersdelight.common.block.entity.CookingPotBlockEntity;
 
 public class CrateBlockEntity extends RandomizableContainerBlockEntity {
     private static final int COLUMN = 6;
     private static final int ROWS = 12;
     private static final int CONTAINER_SIZE = 72;
     private NonNullList<ItemStack> items = NonNullList.withSize(CONTAINER_SIZE, ItemStack.EMPTY);
-
 
     public CrateBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(FUBlockEntityTypes.CRATE.get(), pPos, pBlockState);

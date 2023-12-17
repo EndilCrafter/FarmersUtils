@@ -16,7 +16,7 @@ public class FUTabs {
     public static final RegistryObject<CreativeModeTab> FU_TAB = TABS.register(FarmersUtils.MOD_ID,
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.farmersutils"))
-                    .icon(() -> new ItemStack(Items.DIAMOND_HOE))
+                    .icon(() -> new ItemStack(FUItems.CRATE.get()))
                     .displayItems((parameters, output) -> FUItems.CREATIVE_TAB_ITEMS.forEach((item) -> output.accept(item.get())))
                     .build());
 
