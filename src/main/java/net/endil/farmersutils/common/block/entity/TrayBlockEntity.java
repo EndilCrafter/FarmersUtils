@@ -14,7 +14,6 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.Vec2;
 
 public class TrayBlockEntity extends BaseContainerBlockEntity {
     private NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
@@ -107,17 +106,5 @@ public class TrayBlockEntity extends BaseContainerBlockEntity {
     @Override
     public void clearContent() {
         this.items.clear();
-    }
-
-    public Vec2 getTrayItemOffset(int index) {
-        final float X_OFFSET = 0.3F;
-        final float Y_OFFSET = 0.2F;
-        final Vec2[] OFFSETS = {
-                new Vec2(X_OFFSET, Y_OFFSET),
-                new Vec2(0.0F, Y_OFFSET),
-                new Vec2(-X_OFFSET, Y_OFFSET),
-                new Vec2(X_OFFSET, -Y_OFFSET)
-        };
-        return OFFSETS[index];
     }
 }
