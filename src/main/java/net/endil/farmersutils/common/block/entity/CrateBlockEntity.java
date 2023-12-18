@@ -3,25 +3,15 @@ package net.endil.farmersutils.common.block.entity;
 import net.endil.farmersutils.common.registry.FUBlockEntityTypes;
 import net.endil.farmersutils.common.world.inventory.CrateMenu;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import vectorwing.farmersdelight.common.block.entity.CookingPotBlockEntity;
 
 public class CrateBlockEntity extends RandomizableContainerBlockEntity {
     private static final int COLUMN = 6;
@@ -50,7 +40,6 @@ public class CrateBlockEntity extends RandomizableContainerBlockEntity {
         if (!this.tryLoadLootTable(pTag) && pTag.contains("Items", 9)) {
             ContainerHelper.loadAllItems(pTag, this.items);
         }
-
     }
 
     @Override
@@ -77,4 +66,6 @@ public class CrateBlockEntity extends RandomizableContainerBlockEntity {
     public int getContainerSize() {
         return 72;
     }
+
+
 }

@@ -1,7 +1,19 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "farmersutils:block/tray",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "farmersutils:block/tray",
+      "y": 180
+    },
+    "facing=south": {
       "model": "farmersutils:block/tray"
+    },
+    "facing=west": {
+      "model": "farmersutils:block/tray",
+      "y": 90
     }
   }
 }

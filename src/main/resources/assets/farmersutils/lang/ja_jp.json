@@ -31,6 +31,7 @@
   "item.farmersutils.boiled_golden_egg": "金のゆで卵",
 
   "farmersutils.container.crate": "木箱",
+  "farmersutils.container.tray": "トレー",
 
   "config.farmersutils.general_settings": "基本設定",
   "config.farmersutils.general_settings.enable_storages": "バニラの材料の圧縮ブロックを有効にする",

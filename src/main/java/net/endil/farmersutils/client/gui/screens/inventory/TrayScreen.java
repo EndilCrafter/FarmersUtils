@@ -1,7 +1,7 @@
 package net.endil.farmersutils.client.gui.screens.inventory;
 
 import net.endil.farmersutils.FarmersUtils;
-import net.endil.farmersutils.common.world.inventory.CrateMenu;
+import net.endil.farmersutils.common.world.inventory.TrayMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
@@ -11,13 +11,13 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class CrateScreen extends AbstractContainerScreen<CrateMenu> {
-    private static final ResourceLocation CONTAINER_TEXTURE = new ResourceLocation(FarmersUtils.MOD_ID, "textures/gui/container/crate.png");
-    protected int imageWidth = 230;
-    protected int imageHeight = 222;
+public class TrayScreen extends AbstractContainerScreen<TrayMenu> {
+    private static final ResourceLocation CONTAINER_TEXTURE = new ResourceLocation(FarmersUtils.MOD_ID, "textures/gui/container/tray.png");
+    protected int imageWidth = 176;
+    protected int imageHeight = 148;
 
-    public CrateScreen(CrateMenu crate, Inventory inventory, Component title) {
-        super(crate, inventory, title);
+    public TrayScreen(TrayMenu tray, Inventory inventory, Component title) {
+        super(tray, inventory, title);
         ++this.imageHeight;
     }
 
@@ -35,8 +35,8 @@ public class CrateScreen extends AbstractContainerScreen<CrateMenu> {
 
     @Override
     protected void renderLabels(GuiGraphics gui, int pMouseX, int pMouseY) {
-        gui.drawString(this.font, this.title, -17, -23, 4210752, false);
+        gui.drawString(this.font, this.title, 75, 14, 4210752, false);
 
-        gui.drawString(this.font, this.playerInventoryTitle, 8, (this.imageHeight - 125 + 2), 4210752, false);
+        gui.drawString(this.font, this.playerInventoryTitle, 8, (this.imageHeight - 86), 4210752, false);
     }
 }

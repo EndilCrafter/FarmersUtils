@@ -1,43 +1,63 @@
 package net.endil.farmersutils.common.block.entity;
 
 import net.endil.farmersutils.common.registry.FUBlockEntityTypes;
+import net.endil.farmersutils.common.world.inventory.TrayMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.tags.ItemTags;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.Container;
 import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
-import vectorwing.farmersdelight.common.block.entity.CuttingBoardBlockEntity;
+import net.minecraft.world.phys.Vec2;
 
-import java.util.Objects;
+public class TrayBlockEntity extends BaseContainerBlockEntity {
+    private NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
 
-public class TrayBlockEntity extends BlockEntity implements Container {
-    private static final int TRAY_SLOTS = 1;
-    private final NonNullList<ItemStack> items = NonNullList.withSize(1, ItemStack.EMPTY);
-
-    public TrayBlockEntity(BlockPos pos, BlockState state) {
-        super(FUBlockEntityTypes.TRAY.get(), pos, state);
+    public TrayBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(FUBlockEntityTypes.TRAY.get(), pPos, pBlockState);
     }
 
-    public void load(CompoundTag tag) {
-        this.items.clear();
-        ContainerHelper.loadAllItems(tag, this.items);
+    protected void saveAdditional(CompoundTag pTag) {
+        super.saveAdditional(pTag);
+        ContainerHelper.saveAllItems(pTag, this.items, false);
     }
 
-    protected void saveAdditional(CompoundTag tag) {
-        ContainerHelper.saveAllItems(tag, this.items, false);
+    public void load(CompoundTag pTag) {
+        super.load(pTag);
+        this.loadFromTag(pTag);
+    }
+
+    public void loadFromTag(CompoundTag pTag) {
+        this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
+        if (pTag.contains("Items", 9)) {
+            ContainerHelper.loadAllItems(pTag, this.items);
+        }
+    }
+
+    @Override
+    protected Component getDefaultName() {
+        return Component.translatable("farmersutils.container.tray");
+    }
+
+    @Override
+    protected AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory) {
+        return new TrayMenu(pContainerId, pInventory, this);
     }
 
     @Override
     public int getContainerSize() {
-        return TRAY_SLOTS;
+        return 4;
+    }
+
+    @Override
+    public int getMaxStackSize() {
+        return 1;
     }
 
     @Override
@@ -46,45 +66,42 @@ public class TrayBlockEntity extends BlockEntity implements Container {
     }
 
     @Override
-    public ItemStack getItem(int pSlot) {
-        return this.items.get(pSlot);
+    public ItemStack getItem(int slot) {
+        return this.items.get(slot);
+    }
+
+    public NonNullList<ItemStack> getItems() {
+        return this.items;
     }
 
     @Override
-    public ItemStack removeItem(int pSlot, int pAmount) {
-        ItemStack itemstack = Objects.requireNonNullElse(this.items.get(pSlot), ItemStack.EMPTY);
-        this.items.set(pSlot, ItemStack.EMPTY);
+    public ItemStack removeItem(int slot, int amount) {
+        ItemStack itemstack = ContainerHelper.removeItem(this.items, slot, amount);
+        if (!itemstack.isEmpty()) {
+            this.setChanged();
+        }
+
         return itemstack;
     }
 
     @Override
-    public ItemStack removeItemNoUpdate(int pSlot) {
-        return this.removeItem(pSlot, 1);
+    public ItemStack removeItemNoUpdate(int slot) {
+        return ContainerHelper.takeItem(this.items, slot);
     }
 
     @Override
-    public void setItem(int slot, ItemStack stack) {
-        if (stack.isEdible()) {
-            this.items.set(slot, stack);
+    public void setItem(int pSlot, ItemStack pStack) {
+        this.items.set(pSlot, pStack);
+        if (pStack.getCount() > this.getMaxStackSize()) {
+            pStack.setCount(this.getMaxStackSize());
         }
-    }
 
-    public int getMaxStackSize() {
-        return 1;
+        this.setChanged();
     }
 
     @Override
-    public boolean stillValid(Player player) {
-        return Container.stillValidBlockEntity(this, player);
-    }
-
-    public boolean canPlaceItem(int pIndex, ItemStack pStack) {
-        return pStack.isEdible() && this.getItem(pIndex).isEmpty();
-    }
-
-    private net.minecraftforge.common.util.LazyOptional<?> itemHandler = net.minecraftforge.common.util.LazyOptional.of(this::createUnSidedHandler);
-    protected net.minecraftforge.items.IItemHandler createUnSidedHandler() {
-        return new net.minecraftforge.items.wrapper.InvWrapper(this);
+    public boolean stillValid(Player pPlayer) {
+        return Container.stillValidBlockEntity(this, pPlayer);
     }
 
     @Override
@@ -92,22 +109,15 @@ public class TrayBlockEntity extends BlockEntity implements Container {
         this.items.clear();
     }
 
-    @Override
-    public <T> net.minecraftforge.common.util.LazyOptional<T> getCapability(net.minecraftforge.common.capabilities.Capability<T> cap, @org.jetbrains.annotations.Nullable net.minecraft.core.Direction side) {
-        if (!this.remove && cap == net.minecraftforge.common.capabilities.ForgeCapabilities.ITEM_HANDLER)
-            return itemHandler.cast();
-        return super.getCapability(cap, side);
-    }
-
-    @Override
-    public void invalidateCaps() {
-        super.invalidateCaps();
-        itemHandler.invalidate();
-    }
-
-    @Override
-    public void reviveCaps() {
-        super.reviveCaps();
-        itemHandler = net.minecraftforge.common.util.LazyOptional.of(this::createUnSidedHandler);
+    public Vec2 getTrayItemOffset(int index) {
+        final float X_OFFSET = 0.3F;
+        final float Y_OFFSET = 0.2F;
+        final Vec2[] OFFSETS = {
+                new Vec2(X_OFFSET, Y_OFFSET),
+                new Vec2(0.0F, Y_OFFSET),
+                new Vec2(-X_OFFSET, Y_OFFSET),
+                new Vec2(X_OFFSET, -Y_OFFSET)
+        };
+        return OFFSETS[index];
     }
 }
