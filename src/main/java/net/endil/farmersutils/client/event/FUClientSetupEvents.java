@@ -9,5 +9,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = FarmersUtils.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class FUClientSetupEvents {
     @SubscribeEvent
-    public static void registerBlockEntityRender(EntityRenderersEvent.RegisterRenderers event) {}
+    public static void registerBlockEntityRender(EntityRenderersEvent.RegisterRenderers event) {
+    }
 }
