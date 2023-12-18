@@ -34,7 +34,7 @@ public class FUBlockLoot extends BlockLootSubProvider {
                 FUBlocks.GOLDEN_MUSHROOM_BAG, FUBlocks.GOLDEN_COCOA_BEAN_BAG, FUBlocks.GOLDEN_FUNGUS_BAG, FUBlocks.GOLDEN_EGG_BOX, FUBlocks.GOLDEN_GLOW_BERRY_BAG, FUBlocks.GOLDEN_KELP_BLOCK, FUBlocks.GOLDEN_SUGAR_CANE_BALE, FUBlocks.SWEET_GOLDEN_BERRY_BAG, FUBlocks.TRAY)) {
             this.dropSelf(blockRegistryObject.get());
         }
-        this.add(FUBlocks.CRATE.get(), (block) -> createShulkerBoxDrop(FUBlocks.CRATE.get()));
+        this.add(FUBlocks.CRATE.get(), (block) -> createCrateDrop(FUBlocks.CRATE.get()));
     }
 
     protected void add(Block block, LootTable.Builder builder) {

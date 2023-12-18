@@ -38,11 +38,11 @@
               "source": "block_entity"
             },
             {
-              "type": "minecraft:shulker_box",
+              "type": "farmersutils:crate",
               "entries": [
                 {
                   "type": "minecraft:dynamic",
-                  "name": "minecraft:contents"
+                  "name": "farmersutils:contents"
                 }
               ],
               "function": "minecraft:set_contents"
