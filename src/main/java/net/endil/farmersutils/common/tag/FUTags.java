@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 public class FUTags {
 
     public static final TagKey<Item> CRATE_CAN_CONTAIN = item("crate_can_contain");
-    public static final TagKey<Item> TRAY_CAN_SERVE = item("crate_can_serve");
+    public static final TagKey<Item> TRAY_CAN_SERVE = item("tray_can_serve");
 
 
     private static TagKey<Item> item(String path) {
