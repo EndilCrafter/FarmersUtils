@@ -31,7 +31,7 @@ public class FUBlockLoot extends BlockLootSubProvider {
     @Override
     protected void generate() {
         for (RegistryObject<Block> blockRegistryObject : Arrays.asList(FUBlocks.APPLE_BAG, FUBlocks.BROWN_MUSHROOM_BAG, FUBlocks.COCOA_BEAN_BAG, FUBlocks.CRIMSON_FUNGUS_BAG, FUBlocks.EGG_BOX, FUBlocks.GLOW_BERRY_BAG, FUBlocks.GOLDEN_APPLE_BAG, FUBlocks.KELP_BLOCK, FUBlocks.RED_MUSHROOM_BAG, FUBlocks.SUGAR_CANE_BALE, FUBlocks.SWEET_BERRY_BAG, FUBlocks.WARPED_FUNGUS_BAG,
-                FUBlocks.GOLDEN_MUSHROOM_BAG, FUBlocks.GOLDEN_COCOA_BEAN_BAG, FUBlocks.GOLDEN_FUNGUS_BAG, FUBlocks.GOLDEN_EGG_BOX, FUBlocks.GOLDEN_GLOW_BERRY_BAG, FUBlocks.GOLDEN_KELP_BLOCK, FUBlocks.GOLDEN_SUGAR_CANE_BALE, FUBlocks.SWEET_GOLDEN_BERRY_BAG, FUBlocks.TRAY)) {
+                FUBlocks.GOLDEN_MUSHROOM_BAG, FUBlocks.GOLDEN_COCOA_BEAN_BAG, FUBlocks.GOLDEN_FUNGUS_BAG, FUBlocks.GOLDEN_EGG_BOX, FUBlocks.GOLDEN_GLOW_BERRY_BAG, FUBlocks.GOLDEN_KELP_BLOCK, FUBlocks.GOLDEN_SUGAR_CANE_BALE, FUBlocks.SWEET_GOLDEN_BERRY_BAG, FUBlocks.TRAY, FUBlocks.PROPELPEARL_BAG, FUBlocks.GOLDELPEARL_BAG, FUBlocks.PROPELPLANT_CANE_BALE, FUBlocks.GOLDELPLANT_CANE_BALE)) {
             this.dropSelf(blockRegistryObject.get());
         }
         this.add(FUBlocks.CRATE.get(), (block) -> createCrateDrop(FUBlocks.CRATE.get()));

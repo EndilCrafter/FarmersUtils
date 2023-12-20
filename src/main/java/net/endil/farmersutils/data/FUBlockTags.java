@@ -16,19 +16,21 @@ import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 
 public class FUBlockTags extends BlockTagsProvider {
-    public FUBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, FarmersUtils.MOD_ID, existingFileHelper);
+    public FUBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, @Nullable ExistingFileHelper helper) {
+        super(output, provider, FarmersUtils.MOD_ID, helper);
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
+    protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(FUBlocks.CRATE.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.KELP_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.GOLDEN_KELP_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.SUGAR_CANE_BALE.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.GOLDEN_SUGAR_CANE_BALE.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.PROPELPLANT_CANE_BALE.get());
+        this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.GOLDELPLANT_CANE_BALE.get());
         for (RegistryObject<Block> blockRegistryObject : Arrays.asList(FUBlocks.APPLE_BAG, FUBlocks.BROWN_MUSHROOM_BAG, FUBlocks.COCOA_BEAN_BAG, FUBlocks.CRIMSON_FUNGUS_BAG, FUBlocks.GLOW_BERRY_BAG, FUBlocks.GOLDEN_APPLE_BAG, FUBlocks.RED_MUSHROOM_BAG, FUBlocks.SWEET_BERRY_BAG, FUBlocks.WARPED_FUNGUS_BAG,
-                FUBlocks.GOLDEN_MUSHROOM_BAG, FUBlocks.GOLDEN_COCOA_BEAN_BAG, FUBlocks.GOLDEN_FUNGUS_BAG, FUBlocks.GOLDEN_GLOW_BERRY_BAG, FUBlocks.SWEET_GOLDEN_BERRY_BAG)) {
+                FUBlocks.GOLDEN_MUSHROOM_BAG, FUBlocks.GOLDEN_COCOA_BEAN_BAG, FUBlocks.GOLDEN_FUNGUS_BAG, FUBlocks.GOLDEN_GLOW_BERRY_BAG, FUBlocks.SWEET_GOLDEN_BERRY_BAG, FUBlocks.PROPELPEARL_BAG, FUBlocks.GOLDELPEARL_BAG)) {
             this.tag(ModTags.MINEABLE_WITH_KNIFE).add(blockRegistryObject.get());
             this.tag(ModTags.STRAW_BLOCKS).add(blockRegistryObject.get());
         }

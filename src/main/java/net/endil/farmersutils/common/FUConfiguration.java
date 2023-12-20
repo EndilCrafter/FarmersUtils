@@ -13,6 +13,7 @@ public class FUConfiguration {
     public static ForgeConfigSpec CLIENT_CONFIG;
     public static ForgeConfigSpec.BooleanValue ENABLE_VANILLA_INGREDIENT_STORAGES;
     public static ForgeConfigSpec.BooleanValue ENABLE_GOLDELIGHT_INGREDIENT_STORAGES;
+    public static ForgeConfigSpec.BooleanValue ENABLE_NETHERSDELIGHT_INGREDIENT_STORAGES;
     public static ForgeConfigSpec.BooleanValue ENABLE_APPLE_BAG;
     public static ForgeConfigSpec.BooleanValue ENABLE_BROWN_MUSHROOM_BAG;
     public static ForgeConfigSpec.BooleanValue ENABLE_COCOA_BEAN_BAG;
@@ -33,6 +34,10 @@ public class FUConfiguration {
     public static ForgeConfigSpec.BooleanValue ENABLE_GOLDEN_KELP_BLOCK;
     public static ForgeConfigSpec.BooleanValue ENABLE_GOLDEN_SUGAR_CANE_BALE;
     public static ForgeConfigSpec.BooleanValue ENABLE_SWEET_GOLDEN_BERRY_BAG;
+    public static ForgeConfigSpec.BooleanValue ENABLE_PROPELPEARL_BAG;
+    public static ForgeConfigSpec.BooleanValue ENABLE_GOLDELPEARL_BAG;
+    public static ForgeConfigSpec.BooleanValue ENABLE_PROPELPLANT_CANE_BALE;
+    public static ForgeConfigSpec.BooleanValue ENABLE_GOLDELPLANT_CANE_BALE;
 
 
     static {
@@ -45,6 +50,8 @@ public class FUConfiguration {
                 .define("enableVanillaIngredientStorages", true);
         ENABLE_GOLDELIGHT_INGREDIENT_STORAGES = COMMON_BUILDER.translation("config.farmersutils.general_settings.enable_goldelight_storages")
                 .define("enableGolDelightIngredientStorages", true);
+        ENABLE_NETHERSDELIGHT_INGREDIENT_STORAGES = COMMON_BUILDER.translation("config.farmersutils.general_settings.enable_nethersdelight_storages")
+                .define("enableNether'sDelightIngredientStorages", true);
         COMMON_BUILDER.pop();
 
         //STORAGES
@@ -71,7 +78,7 @@ public class FUConfiguration {
         ENABLE_SUGAR_CANE_BALE = COMMON_BUILDER.translation("config.farmersutils.storages.enable_sugar_cane_bale")
                 .define("enableSugarCaneBale", true);
         ENABLE_SWEET_BERRY_BAG = COMMON_BUILDER.translation("config.farmersutils.storages.enable_sweet_berry_bag")
-                .define("enableSweetBerry", true);
+                .define("enableSweetBerryBag", true);
         ENABLE_WARPED_FUNGUS_BAG = COMMON_BUILDER.translation("config.farmersutils.storages.enable_warped_fungus_bag")
                 .define("enableWarpedFungusBag", true);
         COMMON_BUILDER.pop();
@@ -94,7 +101,16 @@ public class FUConfiguration {
         ENABLE_GOLDEN_SUGAR_CANE_BALE = COMMON_BUILDER.translation("config.farmersutils.compats.enable_golden_sugar_cane_bale")
                 .define("enableGoldenSugarCaneBale", true);
         ENABLE_SWEET_GOLDEN_BERRY_BAG = COMMON_BUILDER.translation("config.farmersutils.compats.enable_sweet_golden_berry_bag")
-                .define("enableSweetGoldenBerry", true);
+                .define("enableSweetGoldenBerryBag", true);
+        ENABLE_PROPELPEARL_BAG = COMMON_BUILDER.translation("config.farmersutils.compats.enable_propelpearl_bag")
+                .define("enablePropelpearlBag", true);
+        ENABLE_GOLDELPEARL_BAG = COMMON_BUILDER.translation("config.farmersutils.compats.enable_goldelpearl_bag")
+                .define("enableGoldelpearlBag", true);
+         ENABLE_PROPELPLANT_CANE_BALE = COMMON_BUILDER.translation("config.farmersutils.compats.enable_propelplant_cane_bale")
+                .define("enablePropelplantCaneBale", true);
+        ENABLE_GOLDELPLANT_CANE_BALE = COMMON_BUILDER.translation("config.farmersutils.compats.enable_goldelplant_cane_bale")
+                .define("enableGoldelplantCaneBale", true);
+
         COMMON_BUILDER.pop();
 
         COMMON_CONFIG = COMMON_BUILDER.build();

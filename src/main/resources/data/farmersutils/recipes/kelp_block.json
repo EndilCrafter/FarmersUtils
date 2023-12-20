@@ -15,8 +15,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "pattern": [
-    "II",
-    "II"
+    "III",
+    "III",
+    "III"
   ],
   "key": {
     "I": {

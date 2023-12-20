@@ -44,6 +44,11 @@ public class FUBlocks {
     public static final RegistryObject<Block> WARPED_FUNGUS_BAG = BLOCKS.register("warped_fungus_bag",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
 
+    //Nether's Delight Storage
+    public static final RegistryObject<Block> PROPELPEARL_BAG = BLOCKS.register("propelpearl_bag",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+    public static final RegistryObject<Block> PROPELPLANT_CANE_BALE = BLOCKS.register("propelplant_cane_bale",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).mapColor(MapColor.COLOR_BLACK)));
     //GolDelight Storage
 
     public static final RegistryObject<Block> GOLDEN_MUSHROOM_BAG = BLOCKS.register("golden_mushroom_bag",
@@ -62,6 +67,12 @@ public class FUBlocks {
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).mapColor(MapColor.GOLD)));
     public static final RegistryObject<Block> SWEET_GOLDEN_BERRY_BAG = BLOCKS.register("sweet_golden_berry_bag",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).mapColor(MapColor.GOLD)));
+
+    //GD:Nether
+    public static final RegistryObject<Block> GOLDELPEARL_BAG = BLOCKS.register("goldelpearl_bag",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL)));
+    public static final RegistryObject<Block> GOLDELPLANT_CANE_BALE = BLOCKS.register("goldelplant_cane_bale",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).mapColor(MapColor.GOLD)));
 
     //Utils
     public static final RegistryObject<Block> CRATE = BLOCKS.register("crate",

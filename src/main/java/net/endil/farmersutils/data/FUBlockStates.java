@@ -40,11 +40,13 @@ public class FUBlockStates extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         for (RegistryObject<Block> blockRegistryObject : Arrays.asList(FUBlocks.APPLE_BAG, FUBlocks.BROWN_MUSHROOM_BAG, FUBlocks.COCOA_BEAN_BAG, FUBlocks.CRIMSON_FUNGUS_BAG, FUBlocks.GLOW_BERRY_BAG, FUBlocks.GOLDEN_APPLE_BAG, FUBlocks.RED_MUSHROOM_BAG, FUBlocks.SWEET_BERRY_BAG, FUBlocks.WARPED_FUNGUS_BAG,
-                FUBlocks.GOLDEN_MUSHROOM_BAG, FUBlocks.GOLDEN_COCOA_BEAN_BAG, FUBlocks.GOLDEN_FUNGUS_BAG, FUBlocks.GOLDEN_GLOW_BERRY_BAG, FUBlocks.SWEET_GOLDEN_BERRY_BAG)) {
+                FUBlocks.GOLDEN_MUSHROOM_BAG, FUBlocks.GOLDEN_COCOA_BEAN_BAG, FUBlocks.GOLDEN_FUNGUS_BAG, FUBlocks.GOLDEN_GLOW_BERRY_BAG, FUBlocks.SWEET_GOLDEN_BERRY_BAG, FUBlocks.PROPELPEARL_BAG, FUBlocks.GOLDELPEARL_BAG)) {
             bag(blockRegistryObject);
         }
         axisBlock((RotatedPillarBlock) FUBlocks.SUGAR_CANE_BALE.get());
         axisBlock((RotatedPillarBlock) FUBlocks.GOLDEN_SUGAR_CANE_BALE.get());
+        axisBlock((RotatedPillarBlock) FUBlocks.PROPELPLANT_CANE_BALE.get());
+        axisBlock((RotatedPillarBlock) FUBlocks.GOLDELPLANT_CANE_BALE.get());
     }
 
     private void blockItem(RegistryObject<Block> block) {

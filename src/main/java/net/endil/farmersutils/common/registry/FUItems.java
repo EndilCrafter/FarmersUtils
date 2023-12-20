@@ -47,6 +47,12 @@ public class FUItems {
     public static final RegistryObject<Item> SUGAR_CANE_BALE = registerWithTab("sugar_cane_bale",
             () -> new BlockItem(FUBlocks.SUGAR_CANE_BALE.get(), basicItem()));
 
+    //Nether's Delight
+    public static final RegistryObject<Item> PROPELPEARL_BAG = registerWithTab("propelpearl_bag",
+            () -> new BlockItem(FUBlocks.PROPELPEARL_BAG.get(), basicItem()));
+    public static final RegistryObject<Item> PROPELPLANT_CANE_BALE = registerWithTab("propelplant_cane_bale",
+            () -> new BlockItem(FUBlocks.PROPELPLANT_CANE_BALE.get(), basicItem()));
+
     //Utils
     public static final RegistryObject<Item> CRATE = registerWithTab("crate",
             () -> new BlockItem(FUBlocks.CRATE.get(), basicItem().stacksTo(1)));
@@ -77,6 +83,12 @@ public class FUItems {
             () -> new BlockItem(FUBlocks.GOLDEN_SUGAR_CANE_BALE.get(), basicItem()));
     public static final RegistryObject<Item> BOILED_GOLDEN_EGG = registerWithTab("boiled_golden_egg",
             () -> new Item(foodItem(FUFoodValues.BOILED_GOLDEN_EGG)));
+
+    //GD: Nether's Delight
+    public static final RegistryObject<Item> GOLDELPEARL_BAG = registerWithTab("goldelpearl_bag",
+            () -> new BlockItem(FUBlocks.GOLDELPEARL_BAG.get(), basicItem()));
+    public static final RegistryObject<Item> GOLDELPLANT_CANE_BALE = registerWithTab("goldelplant_cane_bale",
+            () -> new BlockItem(FUBlocks.GOLDELPLANT_CANE_BALE.get(), basicItem()));
 
     public static RegistryObject<Item> registerWithTab(final String name, final Supplier<Item> supplier) {
         RegistryObject<Item> block = ITEMS.register(name, supplier);
