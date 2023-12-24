@@ -4,7 +4,7 @@
       "type": "forge:and",
       "values": [
         {
-          "type": "farmersutils:goldelight_storages_enabled"
+          "type": "farmersutils:nethersdelight_storages_enabled"
         },
         {
           "type": "farmersutils:propelpearl_bag_enabled"

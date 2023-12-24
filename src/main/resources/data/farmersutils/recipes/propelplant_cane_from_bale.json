@@ -4,10 +4,10 @@
       "type": "forge:and",
       "values": [
         {
-          "type": "farmersutils:goldelight_storages_enabled"
+          "type": "farmersutils:nethersdelight_storages_enabled"
         },
         {
-          "type": "farmersutils:propelpearl_cane_bale_enabled"
+          "type": "farmersutils:propelplant_cane_bale_enabled"
         },
         {
           "type": "forge:mod_loaded",

@@ -1,2 +1,4 @@
-// 1.20.1	2023-12-16T20:28:26.5975154	Tags for minecraft:item mod id farmersutils
+// 1.20.1	2023-12-24T19:31:38.0246081	Tags for minecraft:item mod id farmersutils
+3464116327a5062461ac0c31821f456e1ba252f1 data/diet/tags/items/fruits.json
+241fedbab212fa8f3ae601fd13a4acdc6a322b47 data/diet/tags/items/proteins.json
 f757bdaeeb8df54d6c24262bffe78227d0691d50 data/farmersutils/tags/items/crate_can_contain.json
