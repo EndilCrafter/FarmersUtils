@@ -22,7 +22,7 @@ public class FUBlockTags extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(BlockTags.MINEABLE_WITH_AXE).add(FUBlocks.CRATE.get());
+        this.tag(BlockTags.MINEABLE_WITH_AXE).add(FUBlocks.CRATE.get(), FUBlocks.DRYING_RACK.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.KELP_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.GOLDEN_KELP_BLOCK.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(FUBlocks.SUGAR_CANE_BALE.get());

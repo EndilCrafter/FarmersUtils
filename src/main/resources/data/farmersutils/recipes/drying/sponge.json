@@ -1,0 +1,10 @@
+{
+  "type": "farmersutils:drying",
+  "dryingtime": 600,
+  "ingredient": {
+    "item": "minecraft:wet_sponge"
+  },
+  "result": {
+    "item": "minecraft:sponge"
+  }
+}

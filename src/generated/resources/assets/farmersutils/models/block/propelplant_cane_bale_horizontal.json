@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "farmersutils:block/propelplant_cane_bale_end",
+    "side": "farmersutils:block/propelplant_cane_bale_side"
+  }
+}

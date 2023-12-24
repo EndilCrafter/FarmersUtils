@@ -2,6 +2,7 @@ package net.endil.farmersutils.common.registry;
 
 import net.endil.farmersutils.FarmersUtils;
 import net.endil.farmersutils.common.block.CrateBlock;
+import net.endil.farmersutils.common.block.DryingRackBlock;
 import net.endil.farmersutils.common.block.EggBoxBlock;
 import net.endil.farmersutils.common.block.TrayBlock;
 import net.minecraft.world.level.block.Block;
@@ -79,6 +80,8 @@ public class FUBlocks {
             () -> new CrateBlock(BlockBehaviour.Properties.copy(Blocks.COMPOSTER).noOcclusion()));
     public static final RegistryObject<Block> TRAY = BLOCKS.register("tray",
             () -> new TrayBlock(BlockBehaviour.Properties.copy(Blocks.COMPOSTER).noOcclusion().instabreak()));
+    public static final RegistryObject<Block> DRYING_RACK = BLOCKS.register("drying_rack",
+            () -> new DryingRackBlock(BlockBehaviour.Properties.copy(Blocks.COMPOSTER).noOcclusion()));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

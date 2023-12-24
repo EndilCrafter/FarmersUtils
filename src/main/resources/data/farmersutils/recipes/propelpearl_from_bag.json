@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "forge:and",
+      "values": [
+        {
+          "type": "farmersutils:goldelight_storages_enabled"
+        },
+        {
+          "type": "farmersutils:propelpearl_bag_enabled"
+        },
+        {
+          "type": "forge:mod_loaded",
+          "modid": "nethersdelight"
+        }
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "farmersutils:propelpearl_bag"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "nethersdelight:propelpearl"
+  }
+}

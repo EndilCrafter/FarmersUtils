@@ -1,110 +1,136 @@
 package net.endil.farmersutils.common.block.entity;
 
 import net.endil.farmersutils.common.registry.FUBlockEntityTypes;
-import net.endil.farmersutils.common.world.inventory.TrayMenu;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.Container;
-import net.minecraft.world.ContainerHelper;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.network.Connection;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.Vec2;
+import net.minecraftforge.items.ItemStackHandler;
 
-public class TrayBlockEntity extends BaseContainerBlockEntity {
-    private NonNullList<ItemStack> items = NonNullList.withSize(4, ItemStack.EMPTY);
+import javax.annotation.Nullable;
+
+public class TrayBlockEntity extends BlockEntity {
+    private static final int INVENTORY_SLOT_COUNT = 4;
+    private final ItemStackHandler inventory;
 
     public TrayBlockEntity(BlockPos pPos, BlockState pBlockState) {
         super(FUBlockEntityTypes.TRAY.get(), pPos, pBlockState);
+        inventory = createHandler();
     }
 
-    protected void saveAdditional(CompoundTag pTag) {
-        super.saveAdditional(pTag);
-        ContainerHelper.saveAllItems(pTag, this.items, false);
+    public static void displayTick(Level level, BlockPos pos, BlockState state, TrayBlockEntity rack) {
+        rack.added();
     }
 
-    public void load(CompoundTag pTag) {
-        super.load(pTag);
-        this.loadFromTag(pTag);
+    public static void animationTick(Level level, BlockPos pos, BlockState state, TrayBlockEntity tray) {
+
     }
 
-    public void loadFromTag(CompoundTag pTag) {
-        this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        if (pTag.contains("Items", 9)) {
-            ContainerHelper.loadAllItems(pTag, this.items);
+    private void added() {
+        if (level == null) return;
+
+        boolean didInventoryChange = false;
+        for (int i = 0; i < inventory.getSlots(); ++i) {
+            ItemStack trayStack = inventory.getStackInSlot(i);
+            if (!trayStack.isEmpty()) {
+                didInventoryChange = true;
+
+            }
+        }
+
+        if (didInventoryChange) {
+            inventoryChanged();
         }
     }
 
     @Override
-    protected Component getDefaultName() {
-        return Component.translatable("farmersutils.container.tray");
+    public void load(CompoundTag compound) {
+        super.load(compound);
+        if (compound.contains("Inventory")) {
+            this.inventory.deserializeNBT(compound.getCompound("Inventory"));
+        } else {
+            this.inventory.deserializeNBT(compound);
+        }
     }
 
     @Override
-    protected AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory) {
-        return new TrayMenu(pContainerId, pInventory, this);
+    public void saveAdditional(CompoundTag compound) {
+        this.writeItems(compound);
     }
 
-    @Override
-    public int getContainerSize() {
-        return 4;
+    private CompoundTag writeItems(CompoundTag compound) {
+        super.saveAdditional(compound);
+        compound.put("Inventory", this.inventory.serializeNBT());
+        return compound;
     }
 
-    @Override
-    public int getMaxStackSize() {
-        return 1;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return this.items.stream().allMatch(ItemStack::isEmpty);
-    }
-
-    @Override
-    public ItemStack getItem(int slot) {
-        return this.items.get(slot);
-    }
-
-    public NonNullList<ItemStack> getItems() {
-        return this.items;
-    }
-
-    @Override
-    public ItemStack removeItem(int slot, int amount) {
-        ItemStack itemstack = ContainerHelper.removeItem(this.items, slot, amount);
-        if (!itemstack.isEmpty()) {
-            this.setChanged();
+    public int getNextEmptySlot() {
+        for (int i = 0; i < this.inventory.getSlots(); ++i) {
+            ItemStack slotStack = this.inventory.getStackInSlot(i);
+            if (slotStack.isEmpty()) {
+                return i;
+            }
         }
 
-        return itemstack;
+        return -1;
     }
 
-    @Override
-    public ItemStack removeItemNoUpdate(int slot) {
-        return ContainerHelper.takeItem(this.items, slot);
-    }
-
-    @Override
-    public void setItem(int pSlot, ItemStack pStack) {
-        this.items.set(pSlot, pStack);
-        if (pStack.getCount() > this.getMaxStackSize()) {
-            pStack.setCount(this.getMaxStackSize());
+    public boolean addItem(ItemStack itemStackIn, int slot) {
+        if (0 <= slot && slot < this.inventory.getSlots()) {
+            ItemStack slotStack = this.inventory.getStackInSlot(slot);
+            if (slotStack.isEmpty()) {
+                this.inventory.setStackInSlot(slot, itemStackIn.split(1));
+                this.inventoryChanged();
+                return true;
+            }
         }
 
-        this.setChanged();
+        return false;
+    }
+
+    public ItemStackHandler getInventory() {
+        return this.inventory;
+    }
+
+    public Vec2 getTrayItemOffset(int index) {
+        float X_OFFSET = 0.2F; //0.3F->0.2F
+        float Y_OFFSET = 0.2F;
+        Vec2[] OFFSETS = new Vec2[]{new Vec2(0.2F, 0.2F), new Vec2(-0.2F, 0.2F), new Vec2(0.2F, -0.2F), new Vec2(-0.2F, -0.2F)};
+        return OFFSETS[index];
     }
 
     @Override
-    public boolean stillValid(Player pPlayer) {
-        return Container.stillValidBlockEntity(this, pPlayer);
+    public CompoundTag getUpdateTag() {
+        return this.writeItems(new CompoundTag());
     }
 
-    @Override
-    public void clearContent() {
-        this.items.clear();
+    private ItemStackHandler createHandler() {
+        return new ItemStackHandler(4) {
+            public int getSlotLimit(int slot) {
+                return 1;
+            }
+        };
+    }
+
+    @Nullable
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt) {
+        this.load(pkt.getTag());
+    }
+
+    protected void inventoryChanged() {
+        super.setChanged();
+        if (this.level != null) {
+            this.level.sendBlockUpdated(this.getBlockPos(), this.getBlockState(), this.getBlockState(), 2);
+        }
+
     }
 }

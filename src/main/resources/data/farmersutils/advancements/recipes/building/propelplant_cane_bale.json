@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_propelplant_cane": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nethersdelight:propelplant_cane"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "farmersutils:propelplant_cane_bale"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_propelplant_cane",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "farmersutils:propelplant_cane_bale"
+    ]
+  },
+  "sends_telemetry_event": false
+}

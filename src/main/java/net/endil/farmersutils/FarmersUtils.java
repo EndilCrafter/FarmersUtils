@@ -34,6 +34,8 @@ public class FarmersUtils {
         FUBlocks.register(modEventBus);
         FUItems.register(modEventBus);
         FUMenuTypes.register(modEventBus);
+        FURecipeSerializers.register(modEventBus);
+        FURecipeTypes.register(modEventBus);
         FUTabs.register(modEventBus);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, FUConfiguration.COMMON_CONFIG);

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "farmersutils:block/goldelplant_cane_bale_end",
+    "side": "farmersutils:block/goldelplant_cane_bale_side"
+  }
+}

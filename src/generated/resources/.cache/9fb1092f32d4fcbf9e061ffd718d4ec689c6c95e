@@ -1,7 +1,11 @@
-// 1.20.1	2023-12-17T19:15:22.3265851	Recipes
+// 1.20.1	2023-12-24T16:56:21.4026068	Recipes
 24692586b637753cccc0b4e6d5ffedb12f87ab55 data/farmersutils/advancements/recipes/cooking/boiled_egg.json
 ac772027b4ef98bfd518ba6d3af7871ff0ad01fc data/farmersutils/advancements/recipes/decorations/crate.json
+17bf7b24b65a178efd2eece4bfd393ae2d9ec671 data/farmersutils/advancements/recipes/decorations/drying_rack.json
 10ae51d10a2ba340069df3cda559388d36ecf640 data/farmersutils/advancements/recipes/decorations/tray.json
 e8fe7dfc40bbccee9e4a24ddbac4f338f9ba248c data/farmersutils/recipes/cooking/boiled_egg.json
 fbc22c68201f95d35f38b682d476d95dc7f92579 data/farmersutils/recipes/crate.json
+c56f4e6243ca4cec08e05f29614466c8f3e94b3c data/farmersutils/recipes/cutting/apple_slice.json
+70d69a130d9588e0312c53a5987fedaa220e7250 data/farmersutils/recipes/cutting/golden_apple_slice.json
+8f95d1289369638e2e792cec808590f56d6167ed data/farmersutils/recipes/drying_rack.json
 a82ed28dc08a3a325f96adb1b725395402393504 data/farmersutils/recipes/tray.json

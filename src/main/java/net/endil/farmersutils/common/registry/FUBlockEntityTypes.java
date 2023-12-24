@@ -2,6 +2,7 @@ package net.endil.farmersutils.common.registry;
 
 import net.endil.farmersutils.FarmersUtils;
 import net.endil.farmersutils.common.block.entity.CrateBlockEntity;
+import net.endil.farmersutils.common.block.entity.DryingRackBlockEntity;
 import net.endil.farmersutils.common.block.entity.TrayBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,8 @@ public class FUBlockEntityTypes {
             () -> BlockEntityType.Builder.of(CrateBlockEntity::new, FUBlocks.CRATE.get()).build(null));
     public static final RegistryObject<BlockEntityType<TrayBlockEntity>> TRAY = TILES.register("tray",
             () -> BlockEntityType.Builder.of(TrayBlockEntity::new, FUBlocks.TRAY.get()).build(null));
+    public static final RegistryObject<BlockEntityType<DryingRackBlockEntity>> DRYING_RACK = TILES.register("drying_rack",
+            () -> BlockEntityType.Builder.of(DryingRackBlockEntity::new, FUBlocks.DRYING_RACK.get()).build(null));
 
 
 }

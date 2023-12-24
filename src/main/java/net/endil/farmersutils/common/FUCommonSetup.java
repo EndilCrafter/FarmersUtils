@@ -1,6 +1,7 @@
 package net.endil.farmersutils.common;
 
 import net.endil.farmersutils.common.crafting.condition.GolDelightStorageEnabledCondition;
+import net.endil.farmersutils.common.crafting.condition.NethersDelightStorageEnabledCondition;
 import net.endil.farmersutils.common.crafting.condition.VanillaStorageEnabledCondition;
 import net.endil.farmersutils.common.crafting.condition.compat.*;
 import net.endil.farmersutils.common.crafting.condition.storage.*;
@@ -32,5 +33,12 @@ public class FUCommonSetup {
         CraftingHelper.register(new GoldenKelpBlockEnabledCondition.Serializer());
         CraftingHelper.register(new GoldenSugarCaneBaleEnabledCondition.Serializer());
         CraftingHelper.register(new SweetGoldenBerryBagEnabledCondition.Serializer());
+
+        CraftingHelper.register(new NethersDelightStorageEnabledCondition.Serializer());
+        CraftingHelper.register(new PropelpearlBagEnabledCondition.Serializer());
+        CraftingHelper.register(new PropelplantCaneBaleEnabledCondition.Serializer());
+
+        CraftingHelper.register(new GoldelpearlBagEnabledCondition.Serializer());
+        CraftingHelper.register(new GoldelplantCaneBaleEnabledCondition.Serializer());
     }
 }

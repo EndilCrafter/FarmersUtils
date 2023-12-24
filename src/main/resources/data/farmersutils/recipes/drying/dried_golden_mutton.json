@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "goldelight"
+    }
+  ],
+  "type": "farmersutils:drying",
+  "dryingtime": 600,
+  "ingredient": {
+    "item": "goldelight:golden_mutton"
+  },
+  "result": {
+    "item": "farmersutils:dried_golden_mutton"
+  }
+}

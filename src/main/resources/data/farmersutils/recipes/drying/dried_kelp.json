@@ -1,0 +1,10 @@
+{
+  "type": "farmersutils:drying",
+  "dryingtime": 300,
+  "ingredient": {
+    "item": "minecraft:kelp"
+  },
+  "result": {
+    "item": "minecraft:dried_kelp"
+  }
+}

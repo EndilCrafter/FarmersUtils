@@ -1,0 +1,10 @@
+{
+  "type": "farmersutils:drying",
+  "dryingtime": 300,
+  "ingredient": {
+    "item": "farmersdelight:cod_slice"
+  },
+  "result": {
+    "item": "farmersutils:dried_cod_slice"
+  }
+}

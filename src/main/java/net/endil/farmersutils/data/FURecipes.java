@@ -2,6 +2,7 @@ package net.endil.farmersutils.data;
 
 import net.endil.farmersutils.data.recipe.FUCooking;
 import net.endil.farmersutils.data.recipe.FUCrafting;
+import net.endil.farmersutils.data.recipe.FUCutting;
 import net.endil.farmersutils.data.recipe.FUSmelting;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.data.PackOutput;
@@ -23,5 +24,6 @@ public class FURecipes extends RecipeProvider {
         FUCrafting.register(consumer);
         FUSmelting.register(consumer);
         FUCooking.register(consumer);
+        FUCutting.register(consumer);
     }
 }

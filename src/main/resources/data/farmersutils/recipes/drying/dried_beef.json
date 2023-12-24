@@ -1,0 +1,10 @@
+{
+  "type": "farmersutils:drying",
+  "dryingtime": 600,
+  "ingredient": {
+    "item": "minecraft:beef"
+  },
+  "result": {
+    "item": "farmersutils:dried_beef"
+  }
+}

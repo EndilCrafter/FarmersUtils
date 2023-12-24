@@ -26,5 +26,12 @@ public class FUCrafting {
                 .requires(Ingredient.of(Items.BOWL))
                 .unlockedBy("has_bowl", InventoryChangeTrigger.TriggerInstance.hasItems(Items.BOWL))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, FUItems.DRYING_RACK.get())
+                .pattern("SSS")
+                .pattern("I I")
+                .define('S', Ingredient.of(Items.STRING))
+                .define('I', Ingredient.of(Items.STICK))
+                .unlockedBy("has_string", InventoryChangeTrigger.TriggerInstance.hasItems(Items.STRING))
+                .save(consumer);
     }
 }

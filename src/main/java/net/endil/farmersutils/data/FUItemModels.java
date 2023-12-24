@@ -37,7 +37,25 @@ public class FUItemModels extends ItemModelProvider {
         items.remove(FUItems.CRATE.get());
 
         takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
+        simpleModel(FUItems.APPLE_SLICE);
+        simpleModel(FUItems.GOLDEN_APPLE_SLICE);
+        simpleModel(FUItems.DRIED_APPLE_SLICE);
+        simpleModel(FUItems.DRIED_GOLDEN_APPLE_SLICE);
+        simpleModel(FUItems.DRIED_BEEF);
+        simpleModel(FUItems.DRIED_CHICKEN);
+        simpleModel(FUItems.DRIED_COD_SLICE);
+        simpleModel(FUItems.DRIED_MUTTON);
+        simpleModel(FUItems.DRIED_PORKCHOP);
+        simpleModel(FUItems.DRIED_RABBIT);
+        simpleModel(FUItems.DRIED_SALMON_SLICE);
         simpleModel(FUItems.BOILED_EGG);
+        simpleModel(FUItems.DRIED_GOLDEN_BEEF);
+        simpleModel(FUItems.DRIED_GOLDEN_CHICKEN);
+        simpleModel(FUItems.DRIED_GOLDEN_COD_SLICE);
+        simpleModel(FUItems.DRIED_GOLDEN_MUTTON);
+        simpleModel(FUItems.DRIED_GOLDEN_PORKCHOP);
+        simpleModel(FUItems.DRIED_GOLDEN_RABBIT);
+        simpleModel(FUItems.DRIED_GOLDEN_SALMON_SLICE);
         simpleModel(FUItems.BOILED_GOLDEN_EGG);
     }
 

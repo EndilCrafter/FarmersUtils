@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "farmersutils:block/drying_rack",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "farmersutils:block/drying_rack",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "farmersutils:block/drying_rack"
+    },
+    "facing=west": {
+      "model": "farmersutils:block/drying_rack",
+      "y": 90
+    }
+  }
+}

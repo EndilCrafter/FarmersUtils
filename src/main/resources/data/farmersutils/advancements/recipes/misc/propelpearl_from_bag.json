@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_propelpearl_bag": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "farmersutils:propelpearl_bag"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "farmersutils:propelpearl_from_bag"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_propelpearl_bag",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "farmersutils:propelpearl_from_bag"
+    ]
+  },
+  "sends_telemetry_event": false
+}

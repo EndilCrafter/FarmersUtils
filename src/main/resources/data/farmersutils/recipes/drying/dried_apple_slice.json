@@ -1,0 +1,10 @@
+{
+  "type": "farmersutils:drying",
+  "dryingtime": 300,
+  "ingredient": {
+    "item": "farmersutils:apple_slice"
+  },
+  "result": {
+    "item": "farmersutils:dried_apple_slice"
+  }
+}

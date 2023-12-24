@@ -1,0 +1,16 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "goldelight"
+    }
+  ],
+  "type": "farmersutils:drying",
+  "dryingtime": 300,
+  "ingredient": {
+    "item": "goldelight:golden_salmon_slice"
+  },
+  "result": {
+    "item": "farmersutils:dried_golden_salmon_slice"
+  }
+}

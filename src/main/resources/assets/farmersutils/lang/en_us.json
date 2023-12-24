@@ -23,15 +23,39 @@
   "block.farmersutils.golden_sugar_cane_bale": "Golden Sugar Cane Bale",
   "block.farmersutils.sweet_golden_berry_bag": "Sweet Golden Berry Bag",
 
+  "block.farmersutils.propelpearl_bag": "Propelpearl Bag",
+  "block.farmersutils.propelplant_cane_bale": "Propelplant Cane Bale",
+
+  "block.farmersutils.goldelpearl_bag": "Goldelpearl Bag",
+  "block.farmersutils.goldelplant_cane_bale": "Goldelplant Cane Bale",
+
   "block.farmersutils.crate": "Crate",
+  "block.farmersutils.drying_rack": "Drying Rack",
   "block.farmersutils.tray": "Tray",
 
+  "item.farmersutils.apple_slice": "Apple Slice",
+  "item.farmersutils.golden_apple_slice": "Golden Apple Slice",
+  "item.farmersutils.dried_apple_slice": "Dried Apple Slice",
+  "item.farmersutils.dried_golden_apple_slice": "Dried Golden Apple Slice",
+  "item.farmersutils.dried_beef": "Dried Beef",
+  "item.farmersutils.dried_chicken": "Dried Chicken",
+  "item.farmersutils.dried_cod_slice": "Dried Cod Slice",
+  "item.farmersutils.dried_mutton": "Dried Mutton",
+  "item.farmersutils.dried_porkchop": "Dried Porkchop",
+  "item.farmersutils.dried_rabbit": "Dried Rabbit",
+  "item.farmersutils.dried_salmon_slice": "Dried Salmon Slice",
   "item.farmersutils.boiled_egg": "Boiled Egg",
 
+  "item.farmersutils.dried_golden_beef": "Dried Golden Beef",
+  "item.farmersutils.dried_golden_chicken": "Dried Golden Chicken",
+  "item.farmersutils.dried_golden_cod_slice": "Dried Golden Cod Slice",
+  "item.farmersutils.dried_golden_mutton": "Dried Golden Mutton",
+  "item.farmersutils.dried_golden_porkchop": "Dried Golden Porkchop",
+  "item.farmersutils.dried_golden_rabbit": "Dried Golden Rabbit",
+  "item.farmersutils.dried_golden_salmon_slice": "Dried Golden Salmon Slice",
   "item.farmersutils.boiled_golden_egg": "Boiled Golden Egg",
 
   "farmersutils.container.crate": "Crate",
-  "farmersutils.container.tray": "Tray",
 
   "config.farmersutils.general_settings": "General Settings",
   "config.farmersutils.general_settings.enable_storages": "Enable Vanilla Ingredient Storages",
