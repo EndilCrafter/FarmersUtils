@@ -1,0 +1,20 @@
+{
+  "values": [
+    "farmersutils:dried_beef",
+    "farmersutils:dried_chicken",
+    "farmersutils:dried_cod_slice",
+    "farmersutils:dried_mutton",
+    "farmersutils:dried_porkchop",
+    "farmersutils:dried_rabbit",
+    "farmersutils:dried_salmon_slice",
+    "farmersutils:boiled_egg",
+    "farmersutils:dried_golden_beef",
+    "farmersutils:dried_golden_chicken",
+    "farmersutils:dried_golden_cod_slice",
+    "farmersutils:dried_golden_mutton",
+    "farmersutils:dried_golden_porkchop",
+    "farmersutils:dried_golden_rabbit",
+    "farmersutils:dried_golden_salmon_slice",
+    "farmersutils:boiled_golden_egg"
+  ]
+}
